@@ -105,7 +105,7 @@ body {
 .main-landing{
     position: relative;
     top: 80px;
-    background-image: url(/image/BG.png);
+    background-image: url(image/BG.png);
     font-family: "Parkinsans", sans-serif;
     background-size: cover;
     background-position: center;
