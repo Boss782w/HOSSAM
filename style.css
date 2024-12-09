@@ -1,0 +1,379 @@
+body {
+    font-size: 20px;
+    background-color: #111;
+    font-family: "Sour Gummy", sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-text-blue: rgb(32, 117, 197);  
+    --shadow-color: rgb(102, 32, 194);
+    --drop-shadow: 0  2px var(--shadow-color);
+    --bright-blue: rgb(92, 176, 255);
+    --font-blaka: "Blaka", system-ui; 
+    --font-oi: "Oi", serif;
+}
+.mainPageHead {
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+    background-image: url('image/Hossam.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px var(--bright-blue);
+}
+@media (max-width: 768px) {
+    .mainPageHead .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.mainPageHead .header {
+    height: 80px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainPageHead .header .bar {
+    display: flex;
+    gap: 20px;
+}
+.mainPageHead .header .bar .active{
+    color: var(--color-text-blue)!important;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.mainPageHead .header .bar .home,
+.mainPageHead .header .bar .about,
+.mainPageHead .header .bar .my-work {
+    transition: 0.2s;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+}
+.mainPageHead .header .bar .active:hover{
+    color: white !important;
+    background-color: var(--color-text-blue);
+    text-shadow: var(--drop-shadow);
+}
+.mainPageHead .header .bar .about,
+.mainPageHead .header .bar .my-work{
+    padding: 5px;
+}
+.mainPageHead .header .bar .about:hover,
+.mainPageHead .header .bar .my-work:hover{
+    color: white !important;
+    background-color: var(--color-text-blue);
+    border-radius: 10px;
+    text-shadow: var(--drop-shadow);
+}
+.mainPageHead .header .name{
+    font-family: "Jaro", sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-shadow: var(--drop-shadow);
+}
+@media (max-width: 768px) {
+    .mainPageHead .header .name {
+       display: none;
+    }
+
+    .mainPageHead .header .bar .home,
+    .mainPageHead .header .bar .about,
+    .mainPageHead .header .bar .my-work {
+        font-size: 16px; 
+        padding: 3px 5px; 
+    }
+
+    .mainPageHead .header {
+        height: auto;
+        padding: 10px 0;
+    }
+}
+.main-landing{
+    position: relative;
+    top: 80px;
+    background-image: url(/image/BG.png);
+    font-family: "Parkinsans", sans-serif;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 92.3vh;
+}
+@media (max-width: 768px){
+    .main-landing {
+        height: auto;
+        padding: 20px;
+    }
+}
+.main-landing .title{
+    font-family: var(--font-blaka);
+    position: absolute;
+    top: 205px;
+    right: 39%;
+    color: white;
+    font-size: 70px;
+    text-shadow: var(--drop-shadow);
+}
+.main-landing .landing .head-page{
+    position: relative;
+    top: 300px;
+    width: 100vw;
+    height: 300px;
+    backdrop-filter: blur(10px);
+    border: var(--bright-blue) solid 1px;
+    border-left: 0;
+    border-right: 0;
+}
+.main-landing .landing .head-page .con-img-landing img{
+    width: 300px;
+    position: absolute;
+}
+
+.main-landing .landing .head-page .con-img-landing .ship_1{
+    left: 30px;
+    top: -150px;
+    animation-name: ship_1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+@keyframes ship_1{
+    0%{
+        top: -150px;
+    }
+    100%{
+        top: -120px;
+    }
+}
+.main-landing .landing .head-page .con-img-landing .plant{
+    z-index: 0;
+    right: 50px;
+    width: 200px;
+    top: -150px;
+    transform: rotate(24deg);
+    animation-name: plant;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes plant{
+    0%{
+        top: -150px;
+        transform: rotate(24deg);
+    }
+    100%{
+        top: -110px;
+        transform: rotate(35deg);
+    }
+}
+.main-landing .landing .head-page .con-img-landing .rock{
+    right: 406px;
+    top: 300px;
+    width: 100px;
+}
+.main-landing .landing .head-page .con-img-landing .rock-1{
+    right: 471px;
+    top: 200px;
+    z-index: 1;
+    width: 252px;
+    animation-name: rock-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+@keyframes rock-1{
+    0%{
+        transform: rotate(0deg);
+        top: 200px;
+    }
+    100%{
+        transform: rotate(20deg);
+        top: 240px;
+    }
+}
+.main-landing .landing .head-page .con-img-landing .rock-2{
+    right: 700px;
+    top: 280px;
+    width: 100px;
+    animation-name: rock-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes rock-2{
+    0%{
+        transform: rotate(0deg);
+        top: 280px;
+    }
+    100%{
+        transform: rotate(30deg);
+        top: 320px;
+    }
+}
+.main-landing .landing .head-page .con-img-landing .rock-3{
+    animation-name: rock-3;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rock-3{
+    0%{
+        transform: rotate(0deg);
+        top: 300px;
+    }
+    100%{
+        transform: rotate(20deg);
+        top: 240px;
+    }
+}
+.main-landing .landing .head-page .con-cards{
+    position: relative;
+    top: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px;
+}
+.main-landing .landing .head-page .con-cards .image{
+    width: 250px;
+    border: 1.2px solid var(--bright-blue);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+@media (max-width: 768px){
+    .main-landing {
+        height: 100vh;
+        padding: 0;
+    }
+    .main-landing .title {
+        font-size: 40px; 
+        right: auto;
+        text-align: center;
+    }
+    .main-landing .landing{
+        display: flex;
+        justify-content: center;
+    }
+    .main-landing .landing .head-page{
+        height: 150px;
+    }
+    .main-landing .landing .head-page .con-cards {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+    }
+    .main-landing .landing .head-page .con-cards .image {
+        width: 100px; 
+    }
+    .main-landing .landing .head-page .con-img-landing img{
+        width: 100px;
+    }
+    .main-landing .landing .head-page .con-img-landing .rock-1{
+        right: 82px;
+        top: 106px;
+        width: 80px !important;
+    }
+    @keyframes rock-1 {
+        0%{
+            transform: rotate(0deg);
+            top: 106px;
+        }
+        100%{
+            transform: rotate(20deg);
+            top: 90px;
+        }
+    }
+    .main-landing .landing .head-page .con-img-landing .rock-2{
+        right: 165px;
+        width: 64px !important;
+    }
+    @keyframes rock-2 {
+        0%{
+            top: 143px;
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(80deg);
+            top: 114px;
+        }
+    }
+    .main-landing .landing .head-page .con-img-landing .rock-3{
+        right: 106px;
+        width: 53px !important;
+    }
+    @keyframes rock-3 {
+        0%{
+            transform: rotate(40deg);
+            top: 164px;
+        }
+        100%{
+            transform: rotate(20deg);
+            top: 142px;
+        }
+    }
+    .main-landing .landing .head-page .con-img-landing .plant{
+        width: 100px;
+        right: 15px;
+    }
+    @keyframes plant {
+        0%{
+            top: -92px;
+        }
+        100%{
+            top: -51px;
+        }
+    }
+    @keyframes ship_1 {
+        0%{
+            top: -29px;
+        }
+        100%{
+            top: -60px;
+        }
+    }
+}
+.main-landing .landing .head-page .con-cards .image:hover{
+    position: relative;
+    width: 500px;
+    z-index: 10;
+    box-shadow: 0 2px  10px var(--shadow-color);
+}
+@media (max-width: 768px){
+    .main-landing .landing .head-page .con-cards .image:hover{
+        right: auto;
+        width: 120px;
+        z-index: 10;
+        box-shadow: 0 2px  10px var(--shadow-color); 
+    }
+}
+@media (max-width: 519px){
+    .main-landing .landing .head-page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-landing .landing .head-page .con-cards{
+        padding: 0 10px;
+        top: auto;
+    }
+    .main-landing .landing .head-page .con-cards .image{
+        width: 80px;   
+    }
+}
